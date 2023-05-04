@@ -1,0 +1,23 @@
+html{
+  font-family: sans-serif;
+  background-color: blueviolet;
+}
+h1, h2{
+  text-align: center;
+}
+div{
+  margin: 15px;
+  background-color: rgb(70, 197, 255);
+  padding: 5px;
+  line-height: 25px;
+  border-radius: 5px;
+}
+input{
+  border-radius: 5px;
+}
+span{
+  color: darkblue;
+  background-color: rgb(209, 255, 157);
+  padding: 3px;
+  border-radius: 5px;
+}
