@@ -1,4 +1,7 @@
-// дз 2 - задание 2 (if/switch)
+
+// -----------------------------IF/ SWITH-------------------------------------- //
+
+// дз 2 - задание 2
 let input1 = document.getElementById('input1')
 let span1 = document.getElementById('span1')
 function symbol(x:number) {
@@ -83,9 +86,67 @@ input41.addEventListener('input', circleInSquare)
 input42.addEventListener('input', circleInSquare)
 
 // дз 2 - задание 10
+let input51 = document.getElementById('input5.1')
+let input52 = document.getElementById('input5.2')
+let input53 = document.getElementById('input5.3')
+let span5 = document.getElementById('span5')
+let btn1 = document.getElementById('btn1')
+function leapYear(){
+  if((input53.value%400==0)||((input53.value%4==0)&&(input53.value%100!=0))){
+    return true}
+    else{
+    return false}
+}
+function nextDay(){
+  if(input51.value == 31){
+    span5.innerText = '1'
+    return 'lastDay'
+  }
+   else if(input51.value == 30 && (input52.value == 4 || input52.value == 6 || input52.value == 9 || input52.value == 11)){
+    span5.innerText = '1'
+    return 'lastDay'
+  }
+  else if(input51.value == 28 && input52.value == 2 && leapYear() == false){
+    span5.innerText = '1'
+    return 'lastDay'
+  }
+  else if(input51.value == 29 && input52.value == 2){
+    span5.innerText = '1'
+    return 'lastDay'
+  }
+  else{
+    span5.innerText = `${Number(input51.value) + 1}`
+  }
+}
+function nextMonth(){
+  if(input52.value == 12 && nextDay() == "lastDay"){
+    span5.innerText += '.1'
+    return 'lastMonth'
+  }
+  else if(nextDay() == "lastDay"){
+    span5.innerText += `.${Number(input52.value) + 1}`
+  }
+  else{
+    span5.innerText += `.${input52.value}`
+  }
+}
+function nextYear(){
+  if(nextMonth() == "lastMonth" && nextDay() == 'lastDay'){
+    span5.innerText += `.1.${Number(input53.value) + 1}`
+  }
+  else{
+    span5.innerText += `.${input53.value}`
+  }
+}
+btn1.addEventListener('click', function(){
+  nextDay();
+  nextMonth();
+  nextYear();
+})
 
+// -----------------------------WHILE/ DO WHILE/ FOR-------------------------------------- //
 
-// дз 3 - задание 2 (while/do-while/for)
+// дз 3 - задание 2
 
 
 // дз 3 - задание 4
@@ -99,8 +160,9 @@ input42.addEventListener('input', circleInSquare)
 
 // дз 3 - задание 10
 
+// -----------------------------RECURSION-------------------------------------- //
 
-// дз 4 - задание 2 (recursion)
+// дз 4 - задание 2
 
 
 // дз 4 - задание 4
