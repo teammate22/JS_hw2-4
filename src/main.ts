@@ -147,12 +147,76 @@ btn1.addEventListener('click', function(){
 // -----------------------------WHILE/ DO WHILE/ FOR-------------------------------------- //
 
 // дз 3 - задание 2
+let input61 = document.getElementById('input6.1');
+let input62 = document.getElementById('input6.2');
+let span6 = document.getElementById('span6');
+
+function maxDiv() {
+  let num1 = Number(input61.value);
+  let num2 = Number(input62.value);
+  let i = 1;
+  let max = 1;
+
+  while (i <= num1 && i <= num2) {
+    if (num1 % i === 0 && num2 % i === 0) {
+      max = i;
+    }
+    i++;
+  }
+
+  span6.innerText = `${max}`;
+}
+
+input61.addEventListener('input', maxDiv);
+input62.addEventListener('input', maxDiv);
 
 
 // дз 3 - задание 4
+let input7 = document.getElementById('input7');
+let span7 = document.getElementById('span7');
 
+function numbersCounter(){
+  let num = input7.value
+  let count = 0
+  for (let i of num){
+    count++
+  }
+  span7.innerText = `${count}`
+}
+input7.addEventListener('input', numbersCounter);
 
 // дз 3 - задание 6
+let input81 = document.getElementById('input8.1');
+let input82 = document.getElementById('input8.2');
+let input83 = document.getElementById('input8.3');
+let span8 = document.getElementById('span8');
+let btn2 = document.getElementById('btn2');
+
+function calculate() {
+  let num1 = Number(input81.value)
+  let num2 = Number(input82.value)
+  let operator = input83.value
+  let result;
+
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+  }
+
+  span8.innerText = `${result}`;
+}
+
+btn2.addEventListener('click', calculate);
 
 
 // дз 3 - задание 8
