@@ -220,9 +220,45 @@ btn2.addEventListener('click', calculate);
 
 
 // дз 3 - задание 8
-
+let span9 = document.getElementById('span9');
+let btn3 = document.getElementById('btn3');
+let count = 2
+function nextDayOfWeek(){
+  switch(count){
+    case 1:
+      span9.innerText = 'Понедельник';
+      count++;
+      break;
+    case 2:
+      span9.innerText = 'Вторник';
+      count++;
+      break;
+    case 3:
+      span9.innerText = 'Среда';
+      count++;
+      break;
+    case 4:
+      span9.innerText = 'Четверг';
+      count++;
+      break;
+    case 5:
+      span9.innerText = 'Пятница';
+      count++;
+      break;
+    case 6:
+      span9.innerText = 'Суббота';
+      count++;
+      break;
+    case 7:
+      span9.innerText = 'Воскресенье';
+      count = 1;
+      break;
+  }
+}
+btn3.addEventListener('click', nextDayOfWeek);
 
 // дз 3 - задание 10
+
 
 // -----------------------------RECURSION-------------------------------------- //
 
