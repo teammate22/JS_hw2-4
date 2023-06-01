@@ -258,7 +258,32 @@ function nextDayOfWeek(){
 btn3.addEventListener('click', nextDayOfWeek);
 
 // дз 3 - задание 10
-
+let span10 = document.getElementById('span10');
+let btn_yes = document.getElementById('btn_yes');
+let btn_more = document.getElementById('btn_more');
+let btn_less = document.getElementById('btn_less');
+let num = 50
+let range = num/2
+function more(){
+  num += range
+  num = Math.round(num)
+  range /= 2
+  span10.innerText = `Ваше число ${num}?`;
+}
+function less(){
+  num -= range
+  num = Math.round(num)
+  range /= 2
+  span10.innerText = `Ваше число ${num}?`;
+}
+function yes(){
+  span10.innerText = `Ура!`;
+  num = 50
+  range = num/2
+}
+btn_less?.addEventListener('click', less)
+btn_more?.addEventListener('click', more)
+btn_yes?.addEventListener('click', yes)
 
 // -----------------------------RECURSION-------------------------------------- //
 
