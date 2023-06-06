@@ -284,20 +284,3 @@ function yes(){
 btn_less?.addEventListener('click', less)
 btn_more?.addEventListener('click', more)
 btn_yes?.addEventListener('click', yes)
-
-// -----------------------------RECURSION-------------------------------------- //
-
-// дз 4 - задание 2
-
-
-// дз 4 - задание 4
-
-
-// дз 4 - задание 6
-
-
-// дз 4 - задание 8
-
-
-// дз 4 - задание 10
-
